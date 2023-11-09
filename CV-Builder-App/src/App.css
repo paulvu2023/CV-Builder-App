@@ -1,0 +1,10 @@
+.left {
+  width: 45%;
+  height: 100%;
+}
+
+.right {
+  background-color: #F1F1F1;
+  width: 55%;
+  height: 100%;
+}
