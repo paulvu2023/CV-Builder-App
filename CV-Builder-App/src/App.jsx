@@ -9,7 +9,7 @@ function App() {
     firstName: '',
     lastName: '',
     email: '',
-    phone: '',
+    phoneNumber: '',
     country: '',
     city: '',
   })

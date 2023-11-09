@@ -10,6 +10,46 @@ export default function PersonalDetails({handleChange}) {
         onChange={handleChange}
         ></input>
       </label>
+      <label>
+        Last Name
+        <input
+        type="text" 
+        name='lastName'
+        onChange={handleChange}
+        ></input>
+      </label>
+      <label>
+        Email
+        <input
+        type="email" 
+        name='email'
+        onChange={handleChange}
+        ></input>
+      </label>
+      <label>
+        Phone Number
+        <input
+        type="tel" 
+        name='phoneNumber'
+        onChange={handleChange}
+        ></input>
+      </label>
+      <label>
+        Country
+        <input
+        type="text" 
+        name='country'
+        onChange={handleChange}
+        ></input>
+      </label>
+      <label>
+        City
+        <input
+        type="text" 
+        name='city'
+        onChange={handleChange}
+        ></input>
+      </label>
     </div>
   )
 }
