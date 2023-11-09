@@ -4,19 +4,34 @@ import './App.css'
 
 function App() {
 
-  
-  
+  const [formData, setFormData] = useState({
+    wantedJobTitle: '',
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    country: '',
+    city: '',
+  })
+  console.log(formData)
 
   function handleSubmit(event) {
     event.preventDefault();
   }
 
-  
+  function handleChange(event){
+    setFormData((prevFormData) => {
+      return {
+        ...prevFormData,
+        [event.target.name]: event.target.value
+      }
+    })
+  }
 
   return (
     <>
       <form className="left" onSubmit={handleSubmit}>
-          <PersonalDetails/>
+          <PersonalDetails handleChange={handleChange}/>
       </form>
       <div className="right">
         
