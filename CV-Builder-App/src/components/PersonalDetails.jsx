@@ -7,54 +7,60 @@ export default function PersonalDetails({handleChange}) {
       </div>
       <div className="personal-details">
         <h1>Personal Details</h1>
-        <label>
-          First Name
-          <input
-          type="text" 
-          name='firstName'
-          onChange={handleChange}
-          ></input>
-        </label>
-        <label>
-          Last Name
-          <input
-          type="text" 
-          name='lastName'
-          onChange={handleChange}
-          ></input>
-        </label>
-        <label>
-          Email
-          <input
-          type="email" 
-          name='email'
-          onChange={handleChange}
-          ></input>
-        </label>
-        <label>
-          Phone Number
-          <input
-          type="tel" 
-          name='phoneNumber'
-          onChange={handleChange}
-          ></input>
-        </label>
-        <label>
-          Country
-          <input
-          type="text" 
-          name='country'
-          onChange={handleChange}
-          ></input>
-        </label>
-        <label>
-          City
-          <input
-          type="text" 
-          name='city'
-          onChange={handleChange}
-          ></input>
-        </label>
+        <div className="container">
+          <div className="form-left">
+            <label>
+              First Name
+              <input
+              type="text" 
+              name='firstName'
+              onChange={handleChange}
+              ></input>
+            </label>
+            <label>
+            Email
+            <input
+            type="email" 
+            name='email'
+            onChange={handleChange}
+            ></input>
+          </label>
+            <label>
+              Country
+              <input
+              type="text" 
+              name='country'
+              onChange={handleChange}
+              ></input>
+            </label>
+          </div>
+          <div className="form-right">
+            <label>
+              Last Name
+              <input
+              type="text" 
+              name='lastName'
+              onChange={handleChange}
+              ></input>
+            </label>
+            <label>
+              City
+              <input
+              type="text" 
+              name='city'
+              onChange={handleChange}
+              ></input>
+            </label>
+            <label>
+              Phone Number
+              <input
+              type="tel" 
+              name='phoneNumber'
+              onChange={handleChange}
+              ></input>
+            </label>
+          </div>
+        </div>
       </div>
     </>
   )
