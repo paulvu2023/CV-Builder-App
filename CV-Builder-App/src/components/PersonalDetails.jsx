@@ -7,6 +7,15 @@ export default function PersonalDetails({formData, handleChange}) {
       </div>
       <div className="personal-details">
         <h1>Personal Details</h1>
+        <label>
+            Wanted Job Title
+            <input
+            value={formData.wantedJobTitle}
+            type="text" 
+            name='wantedJobTitle'
+            onChange={handleChange}
+            ></input>
+          </label>
         <div className="container">
           <div className="form-left">
             <label>
