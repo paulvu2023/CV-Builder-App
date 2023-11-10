@@ -13,6 +13,7 @@ function App() {
     phoneNumber: '',
     country: '',
     city: '',
+    summary: ''
   })
   console.log(formData)
 
