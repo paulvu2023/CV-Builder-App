@@ -33,8 +33,8 @@ function App() {
   return (
     <>
       <form className="left" onSubmit={handleSubmit}>
-          <PersonalDetails handleChange={handleChange}/>
-          <ProfessionalSummary handleChange={handleChange}/>
+          <PersonalDetails formData={formData} handleChange={handleChange}/>
+          <ProfessionalSummary formData={formData} handleChange={handleChange}/>
       </form>
       <div className="right">
         

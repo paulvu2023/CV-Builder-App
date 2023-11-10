@@ -1,4 +1,4 @@
-export default function PersonalDetails({handleChange}) {
+export default function PersonalDetails({formData, handleChange}) {
   return (
     <>
       <div className="logo-text">
@@ -12,6 +12,7 @@ export default function PersonalDetails({handleChange}) {
             <label>
               First Name
               <input
+              value={formData.firstName}
               type="text" 
               name='firstName'
               onChange={handleChange}
@@ -20,6 +21,7 @@ export default function PersonalDetails({handleChange}) {
             <label>
             Email
             <input
+            value={formData.email}
             type="email" 
             name='email'
             onChange={handleChange}
@@ -28,6 +30,7 @@ export default function PersonalDetails({handleChange}) {
             <label>
               Country
               <input
+              value={formData.country}
               type="text" 
               name='country'
               onChange={handleChange}
@@ -38,6 +41,7 @@ export default function PersonalDetails({handleChange}) {
             <label>
               Last Name
               <input
+              value={formData.lastName}
               type="text" 
               name='lastName'
               onChange={handleChange}
@@ -48,6 +52,7 @@ export default function PersonalDetails({handleChange}) {
               <input
               type="text" 
               name='city'
+              value={formData.city}
               onChange={handleChange}
               ></input>
             </label>
@@ -56,6 +61,7 @@ export default function PersonalDetails({handleChange}) {
               <input
               type="tel" 
               name='phoneNumber'
+              value={formData.phoneNumber}
               onChange={handleChange}
               ></input>
             </label>
