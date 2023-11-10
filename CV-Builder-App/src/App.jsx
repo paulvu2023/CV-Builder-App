@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import PersonalDetails from "./components/PersonalDetails"
+import ProfessionalSummary from "./components/ProfessionalSummary"
 import './App.css'
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
     <>
       <form className="left" onSubmit={handleSubmit}>
           <PersonalDetails handleChange={handleChange}/>
+          <ProfessionalSummary handleChange={handleChange}/>
       </form>
       <div className="right">
         
