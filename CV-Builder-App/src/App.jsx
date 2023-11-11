@@ -85,7 +85,10 @@ function App() {
                 key={index}
                 />
             ))}
-            <button className="add-education-button"onClick={addNewEducationItem}>Add additional education</button>
+            <button className="add-education-button"onClick={addNewEducationItem}>
+            <i className="fa-solid fa-plus"></i>
+              Add additional education
+              </button>
           </Accordion>
       </form>
       <div className="right">
