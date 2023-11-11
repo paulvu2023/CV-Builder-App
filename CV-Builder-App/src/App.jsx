@@ -23,7 +23,7 @@ function App() {
 
   const [educationData, setEducationData] = useState([
     {
-      id: 0,
+      index: 0,
       school: '',
       degree: '',
       startDate: '',
@@ -31,16 +31,28 @@ function App() {
       location: ''
     }
   ])
-  
 
   function handleDetailsChange(event){
-    setdetailsData((prevdetailsData) => {
+    setdetailsData((prevDetailsData) => {
       return {
-        ...prevdetailsData,
+        ...prevDetailsData,
         [event.target.name]: event.target.value
       }
     })
   }
+
+  function handleEducationChange(event) {
+    const {name, value } = event.target;
+    const index = event.target.dataset.index;
+    setEducationData((prevEducationData) => {
+      const updatedEducationData = [...prevEducationData];
+      updatedEducationData[index] = {
+        ...updatedEducationData[index],
+        [name]: value,
+      };
+      return updatedEducationData;
+    });
+  }  
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -53,7 +65,7 @@ function App() {
           <ProfessionalSummary detailsData={detailsData} handleDetailsChange={handleDetailsChange}/>
           <h1 className="education">Education</h1>
           <Accordion defaultActiveKey="0">
-            <EducationItem eventKey={educationCount} educationData={educationData}/>
+            <EducationItem educationData={educationData} eventKey={educationCount} handleEducationChange={handleEducationChange}/>
           </Accordion>
       </form>
       <div className="right">

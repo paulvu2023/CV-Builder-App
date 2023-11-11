@@ -1,55 +1,60 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Accordion from 'react-bootstrap/Accordion';
 
-export default function EducationItem({educationData, eventKey}) {
+export default function EducationItem({educationData, eventKey, handleEducationChange}) {
   return (<Accordion.Item eventKey={eventKey.toString()}>
-    <Accordion.Header>Accordion Item #1</Accordion.Header>
+    <Accordion.Header>{eventKey.toString()}</Accordion.Header>
     <Accordion.Body>
     <label style={{ margin: '0' }}>
       School
       <input
+      data-index={eventKey}
       value={educationData[eventKey].school}
       type="text" 
       name='school'
-      // onChange={handleDetailsChange}
+      onChange={handleEducationChange}
       ></input>
     </label>
     <label>
       Degree
       <input
+      data-index={eventKey}
       value={educationData[eventKey].degree}
       type="text" 
       name='degree'
-      // onChange={handleDetailsChange}
+      onChange={handleEducationChange}
       ></input>
     </label>
     <div className="form-row">
       <label>
         Start Date
         <input
+        data-index={eventKey}
         value={educationData[eventKey].startDate}
         type="text" 
         name='startDate'
-        // onChange={handleDetailsChange}
+        onChange={handleEducationChange}
         ></input>
       </label>
       <label>
         End Date
         <input
+        data-index={eventKey}
         value={educationData[eventKey].endDate}
         type="text" 
         name='endDate'
-        // onChange={handleDetailsChange}
+        onChange={handleEducationChange}
         ></input>
       </label>
     </div>
     <label>
         Location
         <input
+        data-index={eventKey}
         value={educationData[eventKey].location}
         type="text" 
         name='location'
-        // onChange={handleDetailsChange}
+        onChange={handleEducationChange}
         ></input>
       </label>
     </Accordion.Body>
