@@ -1,4 +1,4 @@
-export default function PersonalDetails({formData, handleChange}) {
+export default function PersonalDetails({detailsData, handleChange}) {
   return (
     <>
       <div className="logo-text">
@@ -10,7 +10,7 @@ export default function PersonalDetails({formData, handleChange}) {
         <label>
             Wanted Job Title
             <input
-            value={formData.wantedJobTitle}
+            value={detailsData.wantedJobTitle}
             type="text" 
             name='wantedJobTitle'
             onChange={handleChange}
@@ -21,7 +21,7 @@ export default function PersonalDetails({formData, handleChange}) {
             <label>
               First Name
               <input
-              value={formData.firstName}
+              value={detailsData.firstName}
               type="text" 
               name='firstName'
               onChange={handleChange}
@@ -30,7 +30,7 @@ export default function PersonalDetails({formData, handleChange}) {
             <label>
             Email
             <input
-            value={formData.email}
+            value={detailsData.email}
             type="email" 
             name='email'
             onChange={handleChange}
@@ -39,7 +39,7 @@ export default function PersonalDetails({formData, handleChange}) {
             <label>
               Country
               <input
-              value={formData.country}
+              value={detailsData.country}
               type="text" 
               name='country'
               onChange={handleChange}
@@ -50,7 +50,7 @@ export default function PersonalDetails({formData, handleChange}) {
             <label>
               Last Name
               <input
-              value={formData.lastName}
+              value={detailsData.lastName}
               type="text" 
               name='lastName'
               onChange={handleChange}
@@ -61,7 +61,7 @@ export default function PersonalDetails({formData, handleChange}) {
               <input
               type="text" 
               name='city'
-              value={formData.city}
+              value={detailsData.city}
               onChange={handleChange}
               ></input>
             </label>
@@ -70,7 +70,7 @@ export default function PersonalDetails({formData, handleChange}) {
               <input
               type="tel" 
               name='phoneNumber'
-              value={formData.phoneNumber}
+              value={detailsData.phoneNumber}
               onChange={handleChange}
               ></input>
             </label>

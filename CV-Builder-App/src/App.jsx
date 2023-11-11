@@ -1,11 +1,16 @@
 import { useState } from 'react'
 import PersonalDetails from "./components/PersonalDetails"
 import ProfessionalSummary from "./components/ProfessionalSummary"
+import EducationItem from './components/EducationItem'
 import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Accordion from 'react-bootstrap/Accordion';
+
+let educationCount = 0;
 
 function App() {
 
-  const [formData, setFormData] = useState({
+  const [detailsData, setdetailsData] = useState({
     wantedJobTitle: '',
     firstName: '',
     lastName: '',
@@ -15,16 +20,16 @@ function App() {
     city: '',
     summary: ''
   })
-  console.log(formData)
+  console.log(detailsData)
 
   function handleSubmit(event) {
     event.preventDefault();
   }
 
   function handleChange(event){
-    setFormData((prevFormData) => {
+    setdetailsData((prevdetailsData) => {
       return {
-        ...prevFormData,
+        ...prevdetailsData,
         [event.target.name]: event.target.value
       }
     })
@@ -33,8 +38,9 @@ function App() {
   return (
     <>
       <form className="left" onSubmit={handleSubmit}>
-          <PersonalDetails formData={formData} handleChange={handleChange}/>
-          <ProfessionalSummary formData={formData} handleChange={handleChange}/>
+          <PersonalDetails detailsData={detailsData} handleChange={handleChange}/>
+          <ProfessionalSummary detailsData={detailsData} handleChange={handleChange}/>
+          
       </form>
       <div className="right">
         
