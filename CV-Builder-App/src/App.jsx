@@ -23,6 +23,7 @@ function App() {
 
   const [educationData, setEducationData] = useState([
     {
+      id: 1,
       school: '',
       degree: '',
       startDate: '',
