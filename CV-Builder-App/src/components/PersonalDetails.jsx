@@ -33,6 +33,7 @@ export default function PersonalDetails({detailsData, handleDetailsChange}) {
             value={detailsData.email}
             type="email" 
             name='email'
+            autoComplete="on"
             onChange={handleDetailsChange}
             ></input>
           </label>
@@ -43,6 +44,7 @@ export default function PersonalDetails({detailsData, handleDetailsChange}) {
               type="text" 
               name='country'
               onChange={handleDetailsChange}
+              autoComplete="on"
               ></input>
             </label>
           </div>
