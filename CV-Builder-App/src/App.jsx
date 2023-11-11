@@ -6,8 +6,6 @@ import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Accordion from 'react-bootstrap/Accordion';
 
-let educationCount = 0;
-
 function App() {
 
   const [detailsData, setdetailsData] = useState({
@@ -23,7 +21,6 @@ function App() {
 
   const [educationData, setEducationData] = useState([
     {
-      index: 0,
       school: '',
       degree: '',
       startDate: '',
@@ -52,7 +49,22 @@ function App() {
       };
       return updatedEducationData;
     });
-  }  
+  }
+
+  function addNewEducationItem() {
+    setEducationData((prevEducationData) => {
+      const newEducationData = [...prevEducationData]
+      newEducationData.push({
+        index: educationData.length,
+        school: '',
+        degree: '',
+        startDate: '',
+        endDate: '',
+        location: ''
+      })
+      return newEducationData;
+    })
+  }
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -65,7 +77,15 @@ function App() {
           <ProfessionalSummary detailsData={detailsData} handleDetailsChange={handleDetailsChange}/>
           <h1 className="education">Education</h1>
           <Accordion defaultActiveKey="0">
-            <EducationItem educationData={educationData} eventKey={educationCount} handleEducationChange={handleEducationChange}/>
+            {educationData.map((educationItem, index) => (
+              <EducationItem
+                educationData={educationData}
+                eventKey={index}
+                handleEducationChange={handleEducationChange}
+                key={index}
+                />
+            ))}
+            <button className="add-education-button"onClick={addNewEducationItem}>Add additional education</button>
           </Accordion>
       </form>
       <div className="right">
