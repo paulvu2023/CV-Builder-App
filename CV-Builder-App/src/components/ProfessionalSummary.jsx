@@ -1,4 +1,4 @@
-export default function ProfessionalSummary({detailsData, handleChange}) {
+export default function ProfessionalSummary({detailsData, handleDetailsChange}) {
   return (
     <>
       <h1 className="professional-summary">Professional Summary</h1>
@@ -7,7 +7,7 @@ export default function ProfessionalSummary({detailsData, handleChange}) {
         <textarea
         name="summary"
         value={detailsData.summary}
-        onChange={handleChange}
+        onChange={handleDetailsChange}
         placeholder="Passionate programmer with 5 years of experience and a track record of ..." />
       </label>
     </>
