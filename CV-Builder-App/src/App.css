@@ -44,6 +44,7 @@ h1 {
 .container {
   display: flex;
   gap: 40px;
+  padding: 0;
 }
 
 .form-left, .form-right {

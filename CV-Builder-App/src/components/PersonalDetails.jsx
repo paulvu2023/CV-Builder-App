@@ -8,14 +8,14 @@ export default function PersonalDetails({detailsData, handleDetailsChange}) {
       <div className="personal-details">
         <h1>Personal Details</h1>
         <label>
-            Wanted Job Title
-            <input
-            value={detailsData.wantedJobTitle}
-            type="text" 
-            name='wantedJobTitle'
-            onChange={handleDetailsChange}
-            ></input>
-          </label>
+          Wanted Job Title
+          <input
+          value={detailsData.wantedJobTitle}
+          type="text" 
+          name='wantedJobTitle'
+          onChange={handleDetailsChange}
+          ></input>
+        </label>
         <div className="container">
           <div className="form-left">
             <label>
