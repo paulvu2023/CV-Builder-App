@@ -2,8 +2,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Accordion from 'react-bootstrap/Accordion';
 
 export default function EducationItem({educationData, eventKey, handleEducationChange}) {
+  const degreeText = educationData[eventKey].degree ? `${educationData[eventKey].degree} at ` : '';
   return (<Accordion.Item eventKey={eventKey.toString()}>
-    <Accordion.Header>{eventKey.toString()}</Accordion.Header>
+    <Accordion.Header>{degreeText}{educationData[eventKey].school}</Accordion.Header>
     <Accordion.Body>
     <label style={{ margin: '0' }}>
       School
