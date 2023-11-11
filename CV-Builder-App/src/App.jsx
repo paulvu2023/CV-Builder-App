@@ -30,10 +30,7 @@ function App() {
       location: ''
     }
   ])
-
-  function handleSubmit(event) {
-    event.preventDefault();
-  }
+  
 
   function handleDetailsChange(event){
     setdetailsData((prevdetailsData) => {
@@ -44,11 +41,16 @@ function App() {
     })
   }
 
+  function handleSubmit(event) {
+    event.preventDefault();
+  }
+
   return (
     <>
       <form className="left" onSubmit={handleSubmit}>
           <PersonalDetails detailsData={detailsData} handleDetailsChange={handleDetailsChange}/>
           <ProfessionalSummary detailsData={detailsData} handleDetailsChange={handleDetailsChange}/>
+          <h1 className="education">Education</h1>
           <Accordion defaultActiveKey="0">
             <EducationItem eventKey={educationCount++}/>
             <EducationItem eventKey={educationCount++}/>
