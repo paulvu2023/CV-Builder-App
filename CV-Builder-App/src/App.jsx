@@ -23,7 +23,7 @@ function App() {
 
   const [educationData, setEducationData] = useState([
     {
-      id: 1,
+      id: 0,
       school: '',
       degree: '',
       startDate: '',
@@ -53,8 +53,7 @@ function App() {
           <ProfessionalSummary detailsData={detailsData} handleDetailsChange={handleDetailsChange}/>
           <h1 className="education">Education</h1>
           <Accordion defaultActiveKey="0">
-            <EducationItem eventKey={educationCount++}/>
-            <EducationItem eventKey={educationCount++}/>
+            <EducationItem eventKey={educationCount} educationData={educationData}/>
           </Accordion>
       </form>
       <div className="right">

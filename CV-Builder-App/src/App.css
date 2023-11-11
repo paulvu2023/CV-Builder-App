@@ -64,7 +64,7 @@ label {
 
 input {
   margin-top: 8px;
-  padding: 15px;
+  padding: 10px;
   font-size: 17px;
   background-color: #EFF2f9;
   border: none;
@@ -111,4 +111,15 @@ input:focus {
 .education {
   margin-top: 40px;
   margin-bottom: 20px;
+}
+
+.form-row {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.form-row label {
+  flex: 1;
 }
