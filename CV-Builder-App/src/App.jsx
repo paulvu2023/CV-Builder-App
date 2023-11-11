@@ -20,7 +20,16 @@ function App() {
     city: '',
     summary: ''
   })
-  console.log(detailsData)
+
+  const [educationData, setEducationData] = useState([
+    {
+      school: '',
+      degree: '',
+      startDate: '',
+      endDate: '',
+      location: ''
+    }
+  ])
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -40,7 +49,10 @@ function App() {
       <form className="left" onSubmit={handleSubmit}>
           <PersonalDetails detailsData={detailsData} handleChange={handleChange}/>
           <ProfessionalSummary detailsData={detailsData} handleChange={handleChange}/>
-          
+          <Accordion defaultActiveKey="0">
+            <EducationItem eventKey={educationCount++}/>
+            <EducationItem eventKey={educationCount++}/>
+          </Accordion>
       </form>
       <div className="right">
         
