@@ -77,6 +77,19 @@ function App() {
     })
   }
 
+  function handleEmploymentChange(event) {
+    const {name, value } = event.target;
+    const index = event.target.dataset.index;
+    setEmploymentData((prevEmploymentData) => {
+      const updatedEmploymentData = [...prevEmploymentData];
+      updatedEmploymentData[index] = {
+        ...prevEmploymentData[index],
+        [name]: value,
+      };
+      return updatedEmploymentData;
+    });
+  }
+
   function handleSubmit(event) {
     event.preventDefault();
   }
