@@ -92,6 +92,22 @@ function App() {
     });
   }
 
+  function addNewEmploymentItem() {
+    setEmploymentData((prevEmploymentData) => {
+      const newEmploymentData = [...prevEmploymentData];
+      newEmploymentData.push({
+        index: employmentData.length,
+        jobTitle: '',
+        company: '',
+        startDate: '',
+        endDate: '',
+        location: '',
+        description: ''
+      })      
+      return newEmploymentData;
+    })
+  }
+
   function handleSubmit(event) {
     event.preventDefault();
   }
@@ -118,7 +134,7 @@ function App() {
           </Accordion>
           <h1>Employment History</h1>
           <Accordion defaultActiveKey="0">
-            {educationData.map((employmentItem, index) => (
+            {employmentData.map((employmentItem, index) => (
               <EmploymentItem
                 employmentData={employmentData}
                 eventKey={index}
@@ -126,7 +142,7 @@ function App() {
                 key={index}
               />
             ))}
-            <button className="add-education-button"onClick={addNewEducationItem}>
+            <button className="add-education-button"onClick={addNewEmploymentItem}>
             <i className="fa-solid fa-plus"></i>
               Add additional employment
             </button>
