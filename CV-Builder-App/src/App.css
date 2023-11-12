@@ -89,6 +89,14 @@ input:focus {
 }
 
 .professional-summary-label textarea {
+  margin-top: 20px;
+}
+
+.employment-label textarea {
+  margin-top: 5px;
+}
+
+.professional-summary-label textarea, .employment-label textarea{
   font-family: 'Roboto', Helvetica, sans-serif;
   padding: 15px;
   width: 100%;
@@ -98,7 +106,6 @@ input:focus {
   border-radius: 8px;
   outline: none;
   background-color: #EFF2f9;
-  margin-top: 20px;
   transition: all 0.3s ease-in-out;
   font-size: 17px;
 }

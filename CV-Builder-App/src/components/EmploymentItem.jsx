@@ -1,10 +1,10 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Accordion from 'react-bootstrap/Accordion';
 
-export default function employmentItem({employmentData, eventKey, handleEmploymentChange}) {
-  const jobText = employmentData[eventKey].jobTitle ? `${employmentData[eventKey].jobTitle} at ` : '';
+export default function EmploymentItem({employmentData, eventKey, handleEmploymentChange}) {
+  const jobText = employmentData[eventKey].company ? ` at ${employmentData[eventKey].company}` : '';
   return (<Accordion.Item eventKey={eventKey.toString()}>
-    <Accordion.Header>{jobText}{employmentData[eventKey].employer}</Accordion.Header>
+    <Accordion.Header>{employmentData[eventKey].jobTitle}{jobText}</Accordion.Header>
     <Accordion.Body>
     <div className="form-row">
       <label style={{ margin: '0' }}>
@@ -17,7 +17,7 @@ export default function employmentItem({employmentData, eventKey, handleEmployme
         onChange={handleEmploymentChange}
         ></input>
       </label>
-      <label>
+      <label style={{ margin: '0' }}>
         Company Name
         <input
         data-index={eventKey}
@@ -60,14 +60,15 @@ export default function employmentItem({employmentData, eventKey, handleEmployme
         ></input>
       </label>
     </div>
-    <label className="professional-summary-label">
-        Description
-        <textarea
-        name="summary"
-        value={employmentData.description}
-        onChange={handleEmploymentChange}
-        placeholder="Developed visually stunning websites with a focus on user-friendliness and design..." />
-      </label>
+    <label className="employment-label">
+      Description
+      <textarea
+      data-index={eventKey}
+      name="description"
+      value={employmentData[eventKey].description}
+      onChange={handleEmploymentChange}
+      placeholder="Developed visually stunning websites with a focus on user-friendliness and design..." />
+    </label>
     </Accordion.Body>
   </Accordion.Item>)
 }

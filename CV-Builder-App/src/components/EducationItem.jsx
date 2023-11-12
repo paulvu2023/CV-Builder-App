@@ -49,15 +49,15 @@ export default function EducationItem({educationData, eventKey, handleEducationC
       </label>
     </div>
     <label>
-        Location
-        <input
-        data-index={eventKey}
-        value={educationData[eventKey].location}
-        type="text" 
-        name='location'
-        onChange={handleEducationChange}
-        ></input>
-      </label>
+      Location
+      <input
+      data-index={eventKey}
+      value={educationData[eventKey].location}
+      type="text" 
+      name='location'
+      onChange={handleEducationChange}
+      ></input>
+    </label>
     </Accordion.Body>
   </Accordion.Item>)
 }

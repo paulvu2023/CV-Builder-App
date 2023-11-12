@@ -2,7 +2,7 @@ import { useState } from 'react'
 import PersonalDetails from "./components/PersonalDetails"
 import ProfessionalSummary from "./components/ProfessionalSummary"
 import EducationItem from './components/EducationItem'
-import employmentItem from './components/EmploymentItem'
+import EmploymentItem from './components/EmploymentItem'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Accordion from 'react-bootstrap/Accordion';
@@ -40,6 +40,7 @@ function App() {
       description: ''
     }
   ])
+  console.log(employmentData)
 
   function handleDetailsChange(event){
     setdetailsData((prevDetailsData) => {
@@ -116,7 +117,20 @@ function App() {
               </button>
           </Accordion>
           <h1>Employment History</h1>
-          
+          <Accordion defaultActiveKey="0">
+            {educationData.map((employmentItem, index) => (
+              <EmploymentItem
+                employmentData={employmentData}
+                eventKey={index}
+                handleEmploymentChange={handleEmploymentChange}
+                key={index}
+              />
+            ))}
+            <button className="add-education-button"onClick={addNewEducationItem}>
+            <i className="fa-solid fa-plus"></i>
+              Add additional employment
+            </button>
+          </Accordion>
       </form>
       <div className="right">
         
