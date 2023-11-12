@@ -29,6 +29,17 @@ function App() {
     }
   ])
 
+  const [employmentData, setEmploymentData] = useState([
+    {
+      jobTitle: '',
+      employer: '',
+      startDate: '',
+      endDate: '',
+      location: '',
+      description: ''
+    }
+  ])
+
   function handleDetailsChange(event){
     setdetailsData((prevDetailsData) => {
       return {
@@ -90,6 +101,8 @@ function App() {
               Add additional education
               </button>
           </Accordion>
+          <h1>Employment History</h1>
+
       </form>
       <div className="right">
         
