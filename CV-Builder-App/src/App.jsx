@@ -2,6 +2,7 @@ import { useState } from 'react'
 import PersonalDetails from "./components/PersonalDetails"
 import ProfessionalSummary from "./components/ProfessionalSummary"
 import EducationItem from './components/EducationItem'
+import employmentItem from './components/EmploymentItem'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Accordion from 'react-bootstrap/Accordion';
@@ -32,7 +33,7 @@ function App() {
   const [employmentData, setEmploymentData] = useState([
     {
       jobTitle: '',
-      employer: '',
+      company: '',
       startDate: '',
       endDate: '',
       location: '',
@@ -115,7 +116,7 @@ function App() {
               </button>
           </Accordion>
           <h1>Employment History</h1>
-
+          
       </form>
       <div className="right">
         
