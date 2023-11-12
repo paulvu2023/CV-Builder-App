@@ -12,7 +12,7 @@
   overflow-y: scroll;
 }
 
-/* Styling for the header */
+/*Header Styling*/
 
 h1 {
   font-family: 'Roboto', Helvetica, sans-serif;
@@ -36,7 +36,7 @@ h1 {
   margin-right: auto;
 }
 
-/* Styling for Personal Details Component */
+/* Personal Details Component Styling*/
 .personal-details {
   margin-top: 50px;
 }
@@ -77,7 +77,7 @@ input:focus {
   box-shadow: 0 2px 0 rgba(0, 123, 255, 0.8);
 }
 
-/* Styling for Professional Summary Component */
+/* Professional Summary Component Styling*/
 .professional-summary {
   margin-top: 40px;
 }
@@ -107,7 +107,7 @@ input:focus {
   box-shadow: 0 2px 0 rgba(0, 123, 255, 0.8);
 }
 
-/* Styling for Education component */
+/* Education component Styling*/
 .education {
   margin-top: 40px;
   margin-bottom: 20px;
@@ -144,4 +144,26 @@ input:focus {
 
 .fa-plus {
   margin-right: 8px;
+}
+
+/* Scrollbar Styling */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #b5d0f8; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #629aee; 
 }
