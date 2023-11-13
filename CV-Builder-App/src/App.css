@@ -204,6 +204,24 @@ input:focus {
   color: #0E374E;
 }
 
+/* Skills Styling */
+.skill-button {
+  padding: 8px;
+  width: 85px;
+  border: 1px solid rgb(26, 145, 240);
+  border-radius: 12px;
+  margin-left: 10px;
+  color:rgb(26, 145, 240);
+  background: transparent;
+  font-weight: 800;
+  transition: all .2s ease-in-out;
+}
+
+.skill-button:hover {
+  color: white;
+  background: rgb(26, 145, 240);
+}
+
 .accordion-body {
   padding: 20px;
 }

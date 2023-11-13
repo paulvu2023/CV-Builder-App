@@ -4,6 +4,7 @@ import ProfessionalSummary from "./components/ProfessionalSummary"
 import EducationItem from './components/EducationItem'
 import EmploymentItem from './components/EmploymentItem'
 import CV from './components/CV'
+import Skills from './components/Skills'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Accordion from 'react-bootstrap/Accordion';
@@ -43,11 +44,16 @@ function App() {
 
   const [skillsData, setSkillsData] = useState([])
 
+  console.log(skillsData);
+
   function addSkill(event) {
+    event.preventDefault();
+    const value = document.getElementById('skill').value
+    document.getElementById('skill').value = ''
     setSkillsData((prevSkillsData) => {
       return [
         ...prevSkillsData,
-        event.target.value
+        value
       ]
     })
   }
@@ -124,40 +130,44 @@ function App() {
 
   return (
     <>
-      <form className="left" onSubmit={handleSubmit}>
-          <PersonalDetails detailsData={detailsData} handleDetailsChange={handleDetailsChange}/>
-          <ProfessionalSummary detailsData={detailsData} handleDetailsChange={handleDetailsChange}/>
-          <h1 className="education">Education</h1>
-          <Accordion defaultActiveKey="0">
-            {educationData.map((educationItem, index) => (
-              <EducationItem
-                educationData={educationData}
-                eventKey={index}
-                handleEducationChange={handleEducationChange}
-                key={index}
+      <div className='left'>
+        <form onSubmit={handleSubmit}>
+            <PersonalDetails detailsData={detailsData} handleDetailsChange={handleDetailsChange}/>
+            <ProfessionalSummary detailsData={detailsData} handleDetailsChange={handleDetailsChange}/>
+            <h1 className="education">Education</h1>
+            <Accordion defaultActiveKey="0">
+              {educationData.map((educationItem, index) => (
+                <EducationItem
+                  educationData={educationData}
+                  eventKey={index}
+                  handleEducationChange={handleEducationChange}
+                  key={index}
+                  />
+              ))}
+              <button className="add-education-button"onClick={addNewEducationItem}>
+              <i className="fa-solid fa-plus"></i>
+                Add additional education
+                </button>
+            </Accordion>
+            <h1>Employment History</h1>
+            <Accordion defaultActiveKey="0">
+              {employmentData.map((employmentItem, index) => (
+                <EmploymentItem
+                  employmentData={employmentData}
+                  eventKey={index}
+                  handleEmploymentChange={handleEmploymentChange}
+                  key={index}
                 />
-            ))}
-            <button className="add-education-button"onClick={addNewEducationItem}>
-            <i className="fa-solid fa-plus"></i>
-              Add additional education
+              ))}
+              <button className="add-education-button"onClick={addNewEmploymentItem}>
+              <i className="fa-solid fa-plus"></i>
+                Add additional employment
               </button>
-          </Accordion>
-          <h1>Employment History</h1>
-          <Accordion defaultActiveKey="0">
-            {employmentData.map((employmentItem, index) => (
-              <EmploymentItem
-                employmentData={employmentData}
-                eventKey={index}
-                handleEmploymentChange={handleEmploymentChange}
-                key={index}
-              />
-            ))}
-            <button className="add-education-button"onClick={addNewEmploymentItem}>
-            <i className="fa-solid fa-plus"></i>
-              Add additional employment
-            </button>
-          </Accordion>
-      </form>
+            </Accordion>
+        </form>
+        <Skills addSkill={addSkill}/>
+      </div>
+
       <div className="right">
         <CV
         detailsData={detailsData}
