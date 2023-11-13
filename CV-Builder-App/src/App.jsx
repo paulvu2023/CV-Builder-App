@@ -63,6 +63,11 @@ function App() {
     }
   }
 
+  function removeSkill(id){
+    const newSkillsData = skillsData.filter(skill => skill.id !== id);
+    setSkillsData(newSkillsData);
+  }
+
   function handleDetailsChange(event){
     setdetailsData((prevDetailsData) => {
       return {
