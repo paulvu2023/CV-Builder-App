@@ -205,9 +205,21 @@ input:focus {
 }
 
 /* Skills Styling */
+.skills-form {
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+}
+
+#skill {
+  flex: 1;
+  margin: 0px;
+}
+
 .skill-button {
   padding: 8px;
   width: 85px;
+  height: 46px;
   border: 1px solid rgb(26, 145, 240);
   border-radius: 12px;
   margin-left: 10px;
@@ -222,6 +234,21 @@ input:focus {
   background: rgb(26, 145, 240);
 }
 
+.skill-item {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid rgb(26, 145, 240);
+  border-radius: 5px;
+}
+
+.fa-trash {
+  color: rgb(26, 145, 240);
+  cursor: pointer;
+}
+
+/* Accordion Styling */
 .accordion-body {
   padding: 20px;
 }
