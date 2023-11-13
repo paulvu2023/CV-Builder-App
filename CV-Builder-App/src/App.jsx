@@ -41,6 +41,10 @@ function App() {
     }
   ])
 
+  const [skillsData, setSkillsData] = useState([])
+
+  
+
   function handleDetailsChange(event){
     setdetailsData((prevDetailsData) => {
       return {
