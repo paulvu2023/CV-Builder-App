@@ -1,15 +1,15 @@
 .left {
-  width: 45%;
   height: 100%;
   padding: 40px;
   overflow-y: scroll;
 }
 
 .right {
+  display: flex;
   background-color: #EFF2f9;
-  width: 55%;
   height: 100%;
   overflow-y: scroll;
+  justify-content: center;
 }
 
 /* Header Styling */
@@ -150,6 +150,62 @@ input:focus {
 
 .fa-plus {
   margin-right: 8px;
+}
+
+/* CV Styling */
+.cv {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  width: 800px;
+  height: 1100px;
+  margin: 40px;
+  background: white;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.cv-left {
+  background-color: #0E374E;
+  padding: 30px;
+  white-space: normal;
+}
+
+.cv-right {
+  padding: 30px;
+}
+
+.subheader {
+  margin-top: 30px;
+  font-size: 25px;
+  font-weight: 800;
+  width: 100%;
+  border-bottom: 1px solid white;
+}
+
+.wrapper {
+  margin-top: 25px;
+  width: 207px;
+  word-wrap: break-word;
+
+}
+
+.cv-left h2 {
+  font-size: 18px;
+  font-weight: 800;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.white {
+  color: white;
+}
+
+.dark-blue {
+  color: #0E374E;
+}
+
+.accordion-body {
+  padding: 20px;
 }
 
 /* Scrollbar Styling */

@@ -3,6 +3,7 @@ import PersonalDetails from "./components/PersonalDetails"
 import ProfessionalSummary from "./components/ProfessionalSummary"
 import EducationItem from './components/EducationItem'
 import EmploymentItem from './components/EmploymentItem'
+import CV from './components/CV'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Accordion from 'react-bootstrap/Accordion';
@@ -26,7 +27,6 @@ function App() {
       degree: '',
       startDate: '',
       endDate: '',
-      location: ''
     }
   ])
 
@@ -40,7 +40,6 @@ function App() {
       description: ''
     }
   ])
-  console.log(employmentData)
 
   function handleDetailsChange(event){
     setdetailsData((prevDetailsData) => {
@@ -149,7 +148,11 @@ function App() {
           </Accordion>
       </form>
       <div className="right">
-        
+        <CV
+        detailsData={detailsData}
+        educationData={educationData}
+        employmentData={employmentData}
+        />
       </div>
     </>
   )
