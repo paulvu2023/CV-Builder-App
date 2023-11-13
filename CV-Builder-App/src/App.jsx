@@ -54,17 +54,14 @@ function App() {
       setSkillsData((prevSkillsData) => {
         return [
           ...prevSkillsData,
-          {
-            value: value,
-            id: value
-          }
+          value
         ]
       })
     }
   }
 
-  function removeSkill(id){
-    const newSkillsData = skillsData.filter(skill => skill.id !== id);
+  function removeSkill(skill){
+    const newSkillsData = skillsData.filter(skillItem => skillItem !== skill);
     setSkillsData(newSkillsData);
   }
 
@@ -175,7 +172,11 @@ function App() {
               </button>
             </Accordion>
         </form>
-        <Skills skillsData={skillsData} addSkill={addSkill}/>
+        <Skills
+        skillsData={skillsData}
+        addSkill={addSkill}
+        removeSkill={removeSkill}
+        />
       </div>
 
       <div className="right">

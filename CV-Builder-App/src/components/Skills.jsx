@@ -1,4 +1,4 @@
-export default function Skills({addSkill}) {
+export default function Skills({skillsData, addSkill, removeSkill}) {
   return (
     <>
       <h1>Skills</h1>
@@ -9,6 +9,14 @@ export default function Skills({addSkill}) {
         <input type="text" id="skill"/>
         <button className="skill-button">Add Skill</button>
       </form>
+      {skillsData.map((skill) => {
+        return (
+          <div key={skill} className="skillItem">
+            <div>{skill}</div>
+            <i onClick={() => {removeSkill(skill)}} className="fa-solid fa-trash"></i>
+          </div>
+        )
+      })}
     </>
   )
 }
