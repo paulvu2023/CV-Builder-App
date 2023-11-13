@@ -49,13 +49,18 @@ function App() {
   function addSkill(event) {
     event.preventDefault();
     const value = document.getElementById('skill').value
-    document.getElementById('skill').value = ''
-    setSkillsData((prevSkillsData) => {
-      return [
-        ...prevSkillsData,
-        value
-      ]
-    })
+    if (value) {
+      document.getElementById('skill').value = ''
+      setSkillsData((prevSkillsData) => {
+        return [
+          ...prevSkillsData,
+          {
+            value: value,
+            id: value
+          }
+        ]
+      })
+    }
   }
 
   function handleDetailsChange(event){
@@ -165,7 +170,7 @@ function App() {
               </button>
             </Accordion>
         </form>
-        <Skills addSkill={addSkill}/>
+        <Skills skillsData={skillsData} addSkill={addSkill}/>
       </div>
 
       <div className="right">
