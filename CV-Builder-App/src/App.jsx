@@ -181,9 +181,10 @@ function App() {
 
       <div className="right">
         <CV
-        detailsData={detailsData}
-        educationData={educationData}
-        employmentData={employmentData}
+          detailsData={detailsData}
+          educationData={educationData}
+          employmentData={employmentData}
+          skillsData={skillsData}
         />
       </div>
     </>

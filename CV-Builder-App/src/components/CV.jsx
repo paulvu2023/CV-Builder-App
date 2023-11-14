@@ -1,4 +1,4 @@
-export default function CV({detailsData, educationData, employmentData}) {
+export default function CV({detailsData, educationData, employmentData, skillsData}) {
   return (
     <div className="cv">
       <div className="cv-left">
@@ -25,7 +25,14 @@ export default function CV({detailsData, educationData, employmentData}) {
             </div>
           )
         })}
-        {/* Add Skills Here */}
+        <div className="subheader white">Expertise</div>
+        <ul>
+          {skillsData.map((skillsItem, index) => {
+            return (
+              <li className="white" key={index}>{skillsItem}</li>
+            )
+          })}
+        </ul>
       </div>
 
       <div className="cv-right">

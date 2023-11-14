@@ -152,6 +152,51 @@ input:focus {
   margin-right: 8px;
 }
 
+/* Skills Styling */
+.skills-form {
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+}
+
+#skill {
+  flex: 1;
+  margin: 0px;
+}
+
+.skill-button {
+  padding: 8px;
+  width: 85px;
+  height: 46px;
+  border: 1px solid rgb(26, 145, 240);
+  border-radius: 12px;
+  margin-left: 10px;
+  color:rgb(26, 145, 240);
+  background: transparent;
+  font-weight: 800;
+  transition: all .2s ease-in-out;
+}
+
+.skill-button:hover {
+  color: white;
+  background: rgb(26, 145, 240);
+}
+
+.skill-item {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid rgb(26, 145, 240);
+  border-radius: 5px;
+}
+
+.fa-trash {
+  color: rgb(26, 145, 240);
+  cursor: pointer;
+}
+
+
 /* CV Styling */
 .cv {
   display: grid;
@@ -204,48 +249,13 @@ input:focus {
   color: #0E374E;
 }
 
-/* Skills Styling */
-.skills-form {
-  margin-top: 25px;
-  display: flex;
-  align-items: center;
-}
-
-#skill {
-  flex: 1;
-  margin: 0px;
-}
-
-.skill-button {
-  padding: 8px;
-  width: 85px;
-  height: 46px;
-  border: 1px solid rgb(26, 145, 240);
-  border-radius: 12px;
-  margin-left: 10px;
-  color:rgb(26, 145, 240);
-  background: transparent;
-  font-weight: 800;
-  transition: all .2s ease-in-out;
-}
-
-.skill-button:hover {
-  color: white;
-  background: rgb(26, 145, 240);
-}
-
-.skill-item {
-  display: flex;
-  justify-content: space-between;
+ul {
   margin-top: 20px;
-  padding: 10px;
-  border: 1px solid rgb(26, 145, 240);
-  border-radius: 5px;
+  padding-left: 15px;
 }
 
-.fa-trash {
-  color: rgb(26, 145, 240);
-  cursor: pointer;
+li {
+  margin-bottom: 8px;
 }
 
 /* Accordion Styling */
