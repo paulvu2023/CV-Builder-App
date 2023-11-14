@@ -28,23 +28,22 @@ export default function PersonalDetails({detailsData, handleDetailsChange}) {
               ></input>
             </label>
             <label>
-            Email
-            <input
-            value={detailsData.email}
-            type="email" 
-            name='email'
-            autoComplete="on"
-            onChange={handleDetailsChange}
-            ></input>
-          </label>
-            <label>
-              Country
+              Email
               <input
-              value={detailsData.country}
-              type="text" 
-              name='country'
-              onChange={handleDetailsChange}
+              value={detailsData.email}
+              type="email" 
+              name='email'
               autoComplete="on"
+              onChange={handleDetailsChange}
+              ></input>
+            </label>
+            <label>
+              City
+              <input
+              type="text" 
+              name='city'
+              value={detailsData.city}
+              onChange={handleDetailsChange}
               ></input>
             </label>
           </div>
@@ -59,21 +58,22 @@ export default function PersonalDetails({detailsData, handleDetailsChange}) {
               ></input>
             </label>
             <label>
-              City
-              <input
-              type="text" 
-              name='city'
-              value={detailsData.city}
-              onChange={handleDetailsChange}
-              ></input>
-            </label>
-            <label>
               Phone Number
               <input
               type="tel" 
               name='phoneNumber'
               value={detailsData.phoneNumber}
               onChange={handleDetailsChange}
+              ></input>
+            </label>
+            <label>
+              Country
+              <input
+              value={detailsData.country}
+              type="text" 
+              name='country'
+              onChange={handleDetailsChange}
+              autoComplete="on"
               ></input>
             </label>
           </div>

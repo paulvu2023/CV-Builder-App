@@ -44,8 +44,6 @@ function App() {
 
   const [skillsData, setSkillsData] = useState([])
 
-  console.log(skillsData);
-
   function addSkill(event) {
     event.preventDefault();
     const value = document.getElementById('skill').value
