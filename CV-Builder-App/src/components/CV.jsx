@@ -66,7 +66,31 @@ export default function CV({detailsData, educationData, employmentData, skillsDa
       </div>
 
       <div className="cv-right">
-
+        <h1><span>{detailsData.firstName || 'John'}</span> {detailsData.lastName || 'Doe'}</h1>
+        <h2>{detailsData.jobTitle || 'Job Title'}</h2>
+        <p>{detailsData.summary || 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste, voluptatibus deleniti in rerum tempore, dolor ipsa minima excepturi sapiente eligendi eius quo, ducimus unde odio velit consequuntur culpa neque officia!'}</p>
+        <div className="subheader dark-blue">Experience</div>
+        {employmentData[0].jobTitle ? (
+          employmentData.map((employmentItem) => (
+            <div key={employmentItem.jobTitle} className="experience-item">
+              <div className="bold">{employmentItem.startDate} - {employmentItem.endDate}</div>
+              <div>{employmentItem.company} | {employmentItem.location}</div>
+              <h5 className="bold">{employmentItem.jobTitle}</h5>
+              <p>{employmentItem.description}</p>
+            </div>
+          ))
+        ) : (
+        <>
+          {[1, 2, 3].map((index) => (
+            <div key={index} className="experience-item">
+              <div className="bold">Start - End</div>
+              <div>Company | Location</div>
+              <h5 className="bold">Job Title</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis lectus ut orci congue imperdiet.</p>
+            </div>
+          ))}
+        </>
+        )}
       </div>
     </div>
   )
