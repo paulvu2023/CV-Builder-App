@@ -20,7 +20,7 @@ export default function CV({detailsData, educationData, employmentData, skillsDa
           </div>
         </div>
         <div className="subheader white">Education</div>
-        {educationData.length > 1 ? (
+        {educationData[0].school ? (
           educationData.map((educationItem, index) => (
             <div key={index} className="wrapper">
               <div className="white">
@@ -67,7 +67,7 @@ export default function CV({detailsData, educationData, employmentData, skillsDa
 
       <div className="cv-right">
         <h1><span>{detailsData.firstName || 'John'}</span> {detailsData.lastName || 'Doe'}</h1>
-        <h2>{detailsData.jobTitle || 'Job Title'}</h2>
+        <h2>{detailsData.wantedJobTitle || 'Job Title'}</h2>
         <p>{detailsData.summary || 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste, voluptatibus deleniti in rerum tempore, dolor ipsa minima excepturi sapiente eligendi eius quo, ducimus unde odio velit consequuntur culpa neque officia!'}</p>
         <div className="subheader dark-blue">Experience</div>
         {employmentData[0].jobTitle ? (
