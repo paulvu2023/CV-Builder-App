@@ -42,6 +42,8 @@ function App() {
     }
   ])
 
+  console.log(employmentData)
+
   const [skillsData, setSkillsData] = useState([])
 
   function addSkill(event) {

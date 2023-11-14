@@ -258,6 +258,39 @@ li {
   margin-bottom: 8px;
 }
 
+/* Right side CV Styling */
+.cv-right h1 {
+  font-size: 40px;
+  font-family: 'Epilogue', Arial, Helvetica, sans-serif;
+  font-weight: 100;
+}
+
+.experience-item {
+  border-left: 2px solid #0E374E;
+  padding-left: 10px;
+  margin-bottom: 40px;
+}
+
+h1 span {
+  font-weight: 800;
+}
+
+h5 {
+  font-size: 18px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.bold {
+  font-weight: 800;
+}
+
+.subheader.dark-blue {
+  border-bottom: 1px solid #0E374E;
+  margin-bottom: 30px;
+}
+
+
 /* Accordion Styling */
 .accordion-body {
   padding: 20px;
