@@ -8,6 +8,8 @@ import Skills from './components/Skills'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Accordion from 'react-bootstrap/Accordion';
+import * as htmlToImage from 'html-to-image';
+import download from 'downloadjs';
 
 function App() {
 
@@ -133,6 +135,26 @@ function App() {
     event.preventDefault();
   }
 
+  function downloadResume() {
+    const cvNode = document.querySelector('.cv');
+    const width = 900;
+    const height = 1100;
+  
+    cvNode.style.margin = '0px';
+  
+    htmlToImage.toPng(cvNode, { width, height })
+      .then(function (dataUrl) {
+        cvNode.style.marginLeft = '0px';
+  
+        download(dataUrl, 'my-resume.png');
+        cvNode.style.margin = '40px';
+      })
+      .catch(function (error) {
+        cvNode.style.margin = '40px';
+        console.error('Error capturing image:', error);
+      });
+  }
+
   return (
     <>
       <div className='left'>
@@ -178,6 +200,7 @@ function App() {
       </div>
 
       <div className="right">
+        <button className="download-button" onClick={downloadResume}>Download CV</button>
         <CV
           detailsData={detailsData}
           educationData={educationData}
