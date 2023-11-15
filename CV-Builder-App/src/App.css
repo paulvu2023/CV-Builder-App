@@ -6,10 +6,13 @@
 
 .right {
   display: flex;
+  flex-direction: column;
   background-color: #EFF2f9;
+  width: 100%;
   height: 100%;
   overflow-y: scroll;
-  justify-content: center;
+  align-items: center;
+  
 }
 
 /* Header Styling */
@@ -198,14 +201,31 @@ input:focus {
 
 
 /* CV Styling */
+.download-button {
+  margin-top: 10px;
+  margin-bottom: -30px;
+  padding: 8px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background: linear-gradient(to right, rgb(230, 30, 77) 0%, rgb(227, 28, 95) 50%, rgb(215, 4, 102) 100%);
+  color: white;
+  font-weight: 800;
+  transition: all .2s ease-in-out;
+}
+
+.fa-download {
+  margin-right: 10px;
+}
+
 .cv {
   display: grid;
   grid-template-columns: 1fr 2fr;
   width: 800px;
-  height: 1100px;
+  min-height: 1100px;
   margin: 40px;
   background: white;
-  overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
