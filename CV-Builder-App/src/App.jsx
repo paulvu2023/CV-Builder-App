@@ -42,8 +42,6 @@ function App() {
     }
   ])
 
-  console.log(employmentData)
-
   const [skillsData, setSkillsData] = useState([])
 
   function addSkill(event) {
@@ -149,12 +147,12 @@ function App() {
                   eventKey={index}
                   handleEducationChange={handleEducationChange}
                   key={index}
-                  />
+                />
               ))}
-              <button className="add-education-button"onClick={addNewEducationItem}>
-              <i className="fa-solid fa-plus"></i>
+              <button type="button" className="add-education-button" onClick={addNewEducationItem}>
+                <i className="fa-solid fa-plus"></i>
                 Add additional education
-                </button>
+              </button>
             </Accordion>
             <h1>Employment History</h1>
             <Accordion defaultActiveKey="0">
@@ -166,8 +164,8 @@ function App() {
                   key={index}
                 />
               ))}
-              <button className="add-education-button"onClick={addNewEmploymentItem}>
-              <i className="fa-solid fa-plus"></i>
+              <button type="button" className="add-education-button" onClick={addNewEmploymentItem}>
+                <i className="fa-solid fa-plus"></i>
                 Add additional employment
               </button>
             </Accordion>
