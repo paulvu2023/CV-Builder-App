@@ -200,15 +200,12 @@ function App() {
       </div>
 
       <div className="right">
-        <button className="download-button" onClick={downloadResume}>
-          <i className="fa-solid fa-download"></i>
-          Download CV
-          </button>
         <CV
           detailsData={detailsData}
           educationData={educationData}
           employmentData={employmentData}
           skillsData={skillsData}
+          downloadResume={downloadResume}
         />
       </div>
     </>

@@ -14,7 +14,6 @@
   height: 100%;
   overflow-y: scroll;
   align-items: center;
-  
 }
 
 /* Header Styling */
@@ -204,14 +203,15 @@ input:focus {
 
 /* CV Styling */
 .download-button {
-  margin-top: 10px;
-  margin-bottom: -25px;
+  margin-top: 20px;
+  margin-bottom: -20px;
   padding: 8px;
-  height: 40px;
+  height: 35px;
   border-radius: 5px;
   border: none;
   outline: none;
   background: linear-gradient(to right, rgb(230, 30, 77) 0%, rgb(227, 28, 95) 50%, rgb(215, 4, 102) 100%);
+  font-size: 14px;
   color: white;
   font-weight: 800;
   transition: all .2s ease-in-out;
@@ -350,7 +350,7 @@ h5 {
 }
 
 /* Media Queries */
-@media (1400px <= width <= 1540px) {
+@media (1200px < width <= 1475px) {
   body #root {
     grid-template-columns: 500px 1fr;
   }
@@ -372,6 +372,6 @@ h5 {
   }
 }
 
-@media (width <= 1400px) {
-
+@media (width <= 1200px) {
+  
 }

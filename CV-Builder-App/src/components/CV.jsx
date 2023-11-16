@@ -1,6 +1,10 @@
-export default function CV({detailsData, educationData, employmentData, skillsData}) {
+export default function CV({detailsData, educationData, employmentData, skillsData, downloadResume}) {
   return (
     <>
+      <button className="download-button" onClick={downloadResume}>
+        <i className="fa-solid fa-download"></i>
+        Download CV
+      </button>
       <div className="cv">
         <div className="cv-left">
           <div className="subheader white">Contact</div>
