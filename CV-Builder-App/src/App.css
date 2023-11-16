@@ -1,3 +1,5 @@
+
+
 .left {
   height: 100%;
   padding: 40px;
@@ -336,4 +338,27 @@ h5 {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #629aee; 
+}
+
+/* Media Queries */
+@media (width <= 1540px) {
+  body #root {
+    grid-template-columns: 500px 1fr;
+  }
+
+  .container {
+    gap: 20px;
+  }
+
+  .container input {
+    width: 195px;
+  }
+
+  .form-row {
+    gap: 20px;
+  }
+
+  .form-row input {
+    width: 174px;
+  }
 }
