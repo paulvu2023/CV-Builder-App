@@ -201,7 +201,7 @@ function App() {
 
       <div className="right">
         <button className="download-button" onClick={downloadResume}>
-          <i class="fa-solid fa-download"></i>
+          <i className="fa-solid fa-download"></i>
           Download CV
           </button>
         <CV
