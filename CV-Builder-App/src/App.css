@@ -1,7 +1,6 @@
-
-
 .left {
   height: 100%;
+  width: 100%;
   padding: 40px;
   overflow-y: scroll;
 }
@@ -14,6 +13,7 @@
   height: 100%;
   overflow-y: scroll;
   align-items: center;
+  z-index: 1;
 }
 
 /* Header Styling */
@@ -321,6 +321,33 @@ h5 {
   margin-bottom: 23px;
 }
 
+.toggle-cv {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  height: 60px;
+  width: 140px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  background: #1A91Fa;
+  font-family: 'Roboto', Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  color: white;
+  z-index: 1;
+}
+
+.fa-wpforms {
+  font-size: 28px;
+}
+
 
 /* Accordion Styling */
 .accordion-body {
@@ -372,6 +399,25 @@ h5 {
   }
 }
 
-@media (width <= 1200px) {
+@media (800px <= width <= 1200px) {
+  form {
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .container {
+    min-width: 100%;
+    margin: 0;
+  }
+}
+
+@media (650px <= width <= 1200px) {
+  body #root {
+    display: flex;
+  }
   
+  .right {
+    display: none;
+  }
 }
