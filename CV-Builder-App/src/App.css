@@ -221,11 +221,15 @@ input:focus {
   margin-right: 10px;
 }
 
+.smaller {
+  font-size: 14px;
+}
+
 .cv {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  width: 800px;
-  min-height: 1100px;
+  width: 600px;
+  min-height: 825px;
   margin: 40px;
   background: white;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
@@ -233,31 +237,31 @@ input:focus {
 
 .cv-left {
   background-color: #0E374E;
-  padding: 30px;
+  padding: 22px;
   white-space: normal;
 }
 
 .cv-right {
-  padding: 30px;
+  padding: 22px;
 }
 
 .subheader {
-  margin-top: 30px;
-  font-size: 25px;
+  margin-top: 22px;
+  font-size: 19px;
   font-weight: 800;
   width: 100%;
   border-bottom: 1px solid white;
 }
 
 .wrapper {
-  margin-top: 25px;
-  width: 207px;
+  margin-top: 19px;
+  width: 156px;
   word-wrap: break-word;
 
 }
 
 .cv-left h2 {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 800;
   margin-top: 3px;
   margin-bottom: 3px;
@@ -272,25 +276,30 @@ input:focus {
 }
 
 ul {
-  margin-top: 20px;
+  margin-top: 15px;
   padding-left: 15px;
 }
 
 li {
-  margin-bottom: 8px;
+  margin-bottom: 7px;
 }
 
 /* Right side CV Styling */
 .cv-right h1 {
-  font-size: 40px;
+  margin-top: 21px;
+  font-size: 31px;
   font-family: 'Epilogue', Arial, Helvetica, sans-serif;
   font-weight: 100;
+}
+
+.cv-right p {
+  font-size: 12px;
 }
 
 .experience-item {
   border-left: 2px solid #0E374E;
   padding-left: 10px;
-  margin-bottom: 40px;
+  margin-bottom: 23px;
 }
 
 h1 span {
@@ -309,7 +318,7 @@ h5 {
 
 .subheader.dark-blue {
   border-bottom: 1px solid #0E374E;
-  margin-bottom: 30px;
+  margin-bottom: 23px;
 }
 
 
@@ -341,7 +350,7 @@ h5 {
 }
 
 /* Media Queries */
-@media (width <= 1540px) {
+@media (1400px <= width <= 1540px) {
   body #root {
     grid-template-columns: 500px 1fr;
   }
@@ -361,4 +370,8 @@ h5 {
   .form-row input {
     width: 174px;
   }
+}
+
+@media (width <= 1400px) {
+
 }
