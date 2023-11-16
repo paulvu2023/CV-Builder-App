@@ -137,8 +137,8 @@ function App() {
 
   function downloadResume() {
     const cvNode = document.querySelector('.cv');
-    const width = 900;
-    const height = 1100;
+    const width = 600;
+    const height = 825;
   
     cvNode.style.margin = '0px';
   
@@ -153,6 +153,19 @@ function App() {
         cvNode.style.margin = '40px';
         console.error('Error capturing image:', error);
       });
+  }
+
+  function toggleCV() {
+    const right = document.querySelector('.right');
+    const left = document.querySelector('.left')
+    
+    if (right.style.display === "none" || right.style.display === "") {
+      right.style.display = "flex";
+      left.style.display = "none";
+    } else {
+      right.style.display = "none";
+      left.style.display = "block";
+    }
   }
 
   return (
@@ -208,6 +221,10 @@ function App() {
           downloadResume={downloadResume}
         />
       </div>
+      <button className="toggle-cv" onClick={toggleCV}>
+        Preview
+        <i className="fa-brands fa-wpforms"></i>
+      </button>
     </>
   )
 }
