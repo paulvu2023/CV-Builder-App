@@ -1,6 +1,6 @@
 export default function Skills({skillsData, addSkill, removeSkill}) {
   return (
-    <>
+    <div className="skills-container">
       <h1>Skills</h1>
       <label className="professional-summary-label">
         Choose important skills that show you fit the position. Make sure they match the key skills in the job listing.
@@ -17,6 +17,6 @@ export default function Skills({skillsData, addSkill, removeSkill}) {
           </div>
         )
       })}
-    </>
+    </div>
   )
 }

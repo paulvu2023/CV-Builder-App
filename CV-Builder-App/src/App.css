@@ -323,10 +323,10 @@ h5 {
 
 .toggle-cv {
   position: fixed;
-  bottom: 0;
-  right: 0;
+  top: 0px;
+  right: 0; 
   margin: 30px;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   gap: 10px;
@@ -394,13 +394,31 @@ h5 {
     gap: 20px;
   }
 
-  .form-row input {
+  .accordion-body .form-row input {
     width: 174px;
+  }
+
+  .form-row input {
+    width: 195px;
+  }
+}
+
+@media (width <= 1200px) {
+  body #root {
+    display: flex;
+  }
+
+  .toggle-cv {
+    display: flex;
+  }
+  
+  .right {
+    display: none;
   }
 }
 
 @media (800px <= width <= 1200px) {
-  form {
+  form, .skills-container {
     width: 700px;
     margin-left: auto;
     margin-right: auto;
@@ -412,12 +430,22 @@ h5 {
   }
 }
 
-@media (650px <= width <= 1200px) {
-  body #root {
-    display: flex;
-  }
-  
-  .right {
-    display: none;
+@media (width <= 800px) {
+  .form-row {
+    flex-direction: column;
+    gap: 0px;
   }
 }
+
+@media (width <= 425px) {
+  .skill-button {
+    font-size: 12px;
+  }
+}
+
+@media (width <= 510px) {
+  .logo-text {
+    justify-content: start;
+  }
+}
+

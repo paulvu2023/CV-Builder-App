@@ -1,8 +1,8 @@
-export default function PersonalDetails({detailsData, handleDetailsChange}) {
+export default function PersonalDetails({ detailsData, handleDetailsChange }) {
   return (
     <>
       <div className="logo-text">
-        <img src="./logo.png" className="logo"/>
+        <img src="./logo.png" className="logo" />
         CV Craft
       </div>
       <div className="personal-details">
@@ -10,75 +10,75 @@ export default function PersonalDetails({detailsData, handleDetailsChange}) {
         <label>
           Wanted Job Title
           <input
-          value={detailsData.wantedJobTitle}
-          type="text" 
-          name='wantedJobTitle'
-          onChange={handleDetailsChange}
+            value={detailsData.wantedJobTitle}
+            type="text"
+            name="wantedJobTitle"
+            onChange={handleDetailsChange}
           ></input>
         </label>
-        <div className="container">
-          <div className="form-left">
-            <label>
-              First Name
-              <input
+        <div className="form-row">
+          <label>
+            First Name
+            <input
               value={detailsData.firstName}
-              type="text" 
-              name='firstName'
+              type="text"
+              name="firstName"
               onChange={handleDetailsChange}
-              ></input>
-            </label>
-            <label>
-              Email
-              <input
+            ></input>
+          </label>
+          <label>
+            Last Name
+            <input
+              value={detailsData.lastName}
+              type="text"
+              name="lastName"
+              onChange={handleDetailsChange}
+            ></input>
+          </label>
+        </div>
+        <div className="form-row">
+          <label>
+            Email
+            <input
               value={detailsData.email}
-              type="email" 
-              name='email'
+              type="email"
+              name="email"
               autoComplete="on"
               onChange={handleDetailsChange}
-              ></input>
-            </label>
-            <label>
-              City
-              <input
-              type="text" 
-              name='city'
-              value={detailsData.city}
-              onChange={handleDetailsChange}
-              ></input>
-            </label>
-          </div>
-          <div className="form-right">
-            <label>
-              Last Name
-              <input
-              value={detailsData.lastName}
-              type="text" 
-              name='lastName'
-              onChange={handleDetailsChange}
-              ></input>
-            </label>
-            <label>
-              Phone Number
-              <input
-              type="tel" 
-              name='phoneNumber'
+            ></input>
+          </label>
+          <label>
+            Phone Number
+            <input
+              type="tel"
+              name="phoneNumber"
               value={detailsData.phoneNumber}
               onChange={handleDetailsChange}
-              ></input>
-            </label>
-            <label>
-              Country
-              <input
+            ></input>
+          </label>
+        </div>
+        <div className="form-row">
+          <label>
+            City
+            <input
+              type="text"
+              name="city"
+              value={detailsData.city}
+              onChange={handleDetailsChange}
+            ></input>
+          </label>
+          <label>
+            Country
+            <input
               value={detailsData.country}
-              type="text" 
-              name='country'
+              type="text"
+              name="country"
               onChange={handleDetailsChange}
               autoComplete="on"
-              ></input>
-            </label>
-          </div>
+            ></input>
+          </label>
         </div>
       </div>
     </>
-  )
+  );
 }
