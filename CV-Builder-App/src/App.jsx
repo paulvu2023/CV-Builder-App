@@ -157,14 +157,17 @@ function App() {
 
   function toggleCV() {
     const right = document.querySelector('.right');
-    const left = document.querySelector('.left')
+    const left = document.querySelector('.left');
+    const toggleButton = document.querySelector('.toggle-cv');
     
     if (right.style.display === "none" || right.style.display === "") {
       right.style.display = "flex";
       left.style.display = "none";
+      toggleButton.innerHTML = 'Edit <i class="fa-brands fa-wpforms"></i>';
     } else {
       right.style.display = "none";
       left.style.display = "block";
+      toggleButton.innerHTML = 'Preview <i class="fa-brands fa-wpforms"></i>';
     }
   }
 
