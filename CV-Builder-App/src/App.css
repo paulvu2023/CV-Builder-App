@@ -381,7 +381,7 @@ h5 {
 @media (min-width: 1201px) {
   body #root {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1.5fr 2fr;
   }
 
   .toggle-cv {
@@ -429,34 +429,6 @@ h5 {
     width: auto;
     margin-left: auto;
     margin-right: auto;
-  }
-
-  /* Add similar resets for other styles adjusted in media queries */
-}
-
-@media (1200px < width <= 1475px) {
-  body #root {
-    grid-template-columns: 500px 1fr;
-  }
-
-  .container {
-    gap: 20px;
-  }
-
-  .container input {
-    width: 195px;
-  }
-
-  .form-row {
-    gap: 20px;
-  }
-
-  .accordion-body .form-row input {
-    width: 174px;
-  }
-
-  .form-row input {
-    width: 195px;
   }
 }
 
