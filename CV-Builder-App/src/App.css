@@ -378,6 +378,62 @@ h5 {
 }
 
 /* Media Queries */
+@media (min-width: 1201px) {
+  body #root {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .toggle-cv {
+    display: none;
+  }
+
+  .left {
+    display: block !important;
+  }
+
+  .right {
+    display: flex;
+  }
+
+  .container {
+    gap: 40px;
+  }
+
+  .container input {
+    width: auto;
+  }
+
+  .form-row {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .form-row input {
+    width: 100%;
+  }
+
+  .accordion-body .form-row input {
+    width: 100%;
+  }
+
+  .right {
+    align-items: center;
+  }
+
+  .cv {
+    margin: 40px;
+  }
+
+  .download-button {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Add similar resets for other styles adjusted in media queries */
+}
+
 @media (1200px < width <= 1475px) {
   body #root {
     grid-template-columns: 500px 1fr;
