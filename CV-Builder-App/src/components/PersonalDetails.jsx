@@ -4,6 +4,9 @@ export default function PersonalDetails({ detailsData, handleDetailsChange }) {
       <div className="logo-text">
         <img src="./logo.png" className="logo" />
         CV Craft
+        <a href="https://github.com/paulvu2023/CV-Builder-App">
+         <i className="fa-brands fa-github-alt"></i>
+        </a>
       </div>
       <div className="personal-details">
         <h1>Personal Details</h1>

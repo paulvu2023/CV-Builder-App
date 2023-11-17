@@ -41,6 +41,18 @@ h1 {
   margin-right: auto;
 }
 
+.fa-github-alt {
+  font-size: 30px;
+  color: #38B6FF;
+  transition: all 0.25s ease-in-out;
+  margin-left: 5px;
+}
+
+.fa-github-alt:hover {
+  transform: rotate(360deg);
+  color: rgb(0, 115, 255);
+}
+
 /* Personal Details Component Styling*/
 .personal-details {
   margin-top: 50px;
