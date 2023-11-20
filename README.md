@@ -8,7 +8,7 @@ CV Craft allows users to easily create and download elegent professional resumes
 
 ## Features
 
-- **Create Professional Resumes **: Easily create job-winning resumes.
+- **Create Professional Resumes**: Easily create job-winning resumes.
   
 - **Instant Resume Updates**: Any information that you type instantly appears on the resume with no waiting or delays.
 
