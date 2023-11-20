@@ -1,6 +1,6 @@
 # CV-Builder-App
 
-CV Craft allows you to easily create and download elegent professional resumes in minutes for free.
+CV Craft allows users to easily create and download elegent professional resumes in minutes for free.
   
 [Live App](https://paulvu2023.github.io/AchieveFlow-Productivity-App/)
 
