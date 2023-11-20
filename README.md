@@ -4,7 +4,7 @@ CV Craft allows users to easily create and download elegent professional resumes
   
 [Live App](https://cv-craft-paul-vu.netlify.app/)
 
-![Screenshot from 2023-11-19 17-58-25](https://github.com/paulvu2023/CV-Builder-App/assets/118864214/71504135-c839-4a0d-b3f3-61191c9a6f73)
+![Screenshot from 2023-11-19 18-01-37](https://github.com/paulvu2023/CV-Builder-App/assets/118864214/55a57dd5-0474-4437-8ba9-d516455f9b0a)
 
 ## Features
 
