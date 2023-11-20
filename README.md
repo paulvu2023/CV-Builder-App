@@ -2,9 +2,9 @@
 
 CV Craft allows users to easily create and download elegent professional resumes in minutes for free.
   
-[Live App](https://paulvu2023.github.io/AchieveFlow-Productivity-App/)
+[Live App](https://cv-craft-paul-vu.netlify.app/)
 
-![Screenshot from 2023-11-19 17-36-43](https://github.com/paulvu2023/CV-Builder-App/assets/118864214/fe763211-37c3-450b-aa3e-64673cdb98db))
+![Screenshot from 2023-11-19 17-58-25](https://github.com/paulvu2023/CV-Builder-App/assets/118864214/71504135-c839-4a0d-b3f3-61191c9a6f73)
 
 ## Features
 
