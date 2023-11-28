@@ -1,6 +1,6 @@
 # CV-Builder-App
 
-CV Craft allows users to easily create and download elegent professional resumes in minutes for free!
+Easily create and download elegent professional resumes in minutes for free!
   
 [Live App](https://cv-craft-paul-vu.netlify.app/)
 
