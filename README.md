@@ -10,7 +10,7 @@ Easily create and download elegent professional resumes in minutes for free!
 
 - **Create Professional Resumes**: Easily create job-winning resumes.
   
-- **Instant Resume Updates**: Any information that you type instantly appears on the resume with no waiting or delays.
+- **Instant Resume Updates**: Any information that you type instantly appears on the resume with no delays.
 
 - **On-the-Fly Editing**: Edit information swiftly, whether it be your name, your skills, education, or more.
   
